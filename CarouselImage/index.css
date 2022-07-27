@@ -87,3 +87,39 @@ body{
     opacity: 1;
 }
 
+.titles{
+    width: 297px;
+    height: 416px;
+    position: absolute;
+    top: 19%;
+    right: 5%;
+    background: linear-gradient(to bottom, transparent, #16161a, 22%,
+    #16161a, 81%, transparent);
+}
+
+.titles a{
+    display: block;
+    color: rgb(255, 255, 255, 0.6);
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 20px;
+}
+.titles .title2{
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: normal;
+    /* sub-title set hidden */
+    display: none;
+}
+/* title active for animation */
+.titles a.active{
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right,rgb(255, 255, 255, 0.25), 20%, transparent, 90% );
+}
+
+.titles a.active .title2{
+    /* set the sub-title show */
+    display: block;
+}
