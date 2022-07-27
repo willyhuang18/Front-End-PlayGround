@@ -1,0 +1,65 @@
+*{
+    /* Initialization  */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    /* 100% width and height */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 100%;
+    height: 592px;
+    position: relative;
+}
+
+.shades{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* element wouldn't affect by pointer */
+    pointer-events: none;
+}
+.shades .left{
+    width: 160px;
+    height: 100%;
+    background: linear-gradient(to left, transparent, #16161a);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.shades .right{
+    width: 160px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #16161a);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.shades .top{
+    width: 160px;
+    height: 90px;
+    background: linear-gradient(to top, transparent, #16161a);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.shades .bottom{
+    width: 160px;
+    height: 220px;
+    background: linear-gradient(to bottom, transparent, #16161a);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
