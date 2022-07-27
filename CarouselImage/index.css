@@ -19,13 +19,14 @@ body{
     position: relative;
 }
 
+/* shadowing the container */
 .shades{
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
-    right: 0;
-    /* element wouldn't affect by pointer */
+    top: 0;
+     /* element wouldn't affect by pointer */
     pointer-events: none;
 }
 .shades .left{
@@ -61,5 +62,28 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+.imgs{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+.imgs a{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.imgs a.active{
+    opacity: 1;
 }
 
