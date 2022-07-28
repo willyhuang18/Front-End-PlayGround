@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    /* Turn 3D on all divs */
+    transform-style: preserve-3d;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top,#1b2735,#090a0f);
+    overflow: hidden;
+    /* Set the visibility */
+    perspective: 500px;
+}
+.camera{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.camera.-x{
+    transform: rotateX(60deg);
+}
+.camera.-y{
+    transform: rotateY(0deg);
+}
+.camera.-z{
+    /* animation: name duration timing-function delay  */
+    animation: rotateZ 30s linear infinite;
+}
+.sea{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: grid;
+    /* 10 rows and 10 columns, each 7.5% width and height */
+    grid-template-rows: repeat(10,7.5%);
+    grid-template-columns: repeat(10,7.5%);
+    grid-gap: 2.5%;
+}
+.wave{
+   /* Perform wave animation: the animation name is played back and forth for infinite times on the Bezier curve */
+    animation: wave 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    /* To set the animation delay, call the custom attribute --d  through the var function*/
+    animation-delay: var(--d);
+}
+.counter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.counter.-x{
+    transform: rotateX(-60deg);
+}
+.counter.-y{
+    transform: rotateY(0deg);
+}
+.counter.-z{
+    /* Perform Z-axis rotation animation */
+    animation: rotateZ 30s linear infinite reverse;
+}
+.ball{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 0px 3px,#fff,#69a8cc 60%,#23315c);
+    border-radius: 100%;
+    /* Drop shadow is better than box-shadow */
+    /* box-shadow: 0 100px 12px rgba(96,148,179,0.2); */
+    filter: drop-shadow(0 100px 12px rgba(96,148,179,0.2));
+}
+
+/* animation */
+@keyframes rotateZ {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes wave {
+    0%{
+        transform: translateZ(0);
+    }
+    100%{
+        transform: translateZ(30px);
+    }
+}

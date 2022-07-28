@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>3D Dot wave animation special effects</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script src="vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="camera -x">
+            <div class="camera -y">
+                <div class="camera -z">
+                    <div class="sea">
+                        <!-- --d is a custom attribute, which can be called by var function in CSS. It is used to store the animation delay time (in milliseconds) of each wave. -->
+                        <div class="wave" v-for="item in 100" :style="{'--d':item*-30+'ms'}">
+                            <div class="counter -z">
+                                <div class="counter -y">
+                                    <div class="counter -x">
+                                        <div class="ball"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    new Vue({
+        el:'#container',
+        data:{}
+    })
+</script>
