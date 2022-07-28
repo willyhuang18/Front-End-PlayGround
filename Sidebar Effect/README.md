@@ -3,5 +3,5 @@
 # User 
 - User are able to hover the sidebar to view the content of it
 
-![image](https://user-images.githubusercontent.com/87446864/181634337-d3812a69-ba4e-4c88-b37b-b85c12713eb3.png)
+![image](https://user-images.githubusercontent.com/87446864/181649222-0f44e72a-2262-4353-9710-b2088a5ace08.png)
 
